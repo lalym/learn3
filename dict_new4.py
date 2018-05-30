@@ -11,7 +11,19 @@ is_male = {
   'Миша': True,
 }
 # ???
-
 # Пример вывода:
 # В классе 2a 2 девочки и 0 мальчика.
 # В классе 3c 0 девочки и 2 мальчика.
+
+
+for students in school:
+  names = [name['first_name'] for name in students['students']]
+  gend = {'девочки': 0, 'мальчики': 0}
+
+  for name in names:
+    if is_male[name]:
+      gend['мальчики'] += 1
+    else:
+      gend['девочки'] += 1
+
+  print('В классе {} {} девочки и {} мальчика'.format(students['class'], gend['девочки'], gend['мальчики']))

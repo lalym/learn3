@@ -12,7 +12,5 @@ groups = [
 
 group_count = 1
 for i in groups:
-    print("Группа {}: {}".format(group_count, i))
+    print("Группа {}: {}".format(group_count, ', '.join(i)))
     group_count += 1
-
-#убрать скобки

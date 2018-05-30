@@ -6,7 +6,7 @@ is_male = {
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 for name in names:
-    if is_male.values() == False:
+    if is_male[name]:
         print(name + " мужчина")
     else:
         print(name + " женщина")

@@ -7,9 +7,15 @@ students = [
   {'first_name': 'Маша'},
   {'first_name': 'Петя'},
 ]
-rv=str(len([x for x in students if x['first_name'] == 'Вася']))
-rp=str(len([x for x in students if x['first_name'] == 'Петя']))
-rm=str(len([x for x in students if x['first_name'] == 'Маша']))
-print("Вася: "+rv)
-print("Петя: "+rp)
-print("Маша: "+rm)
+names={}
+for student in students:
+    if student['first_name'] in names:
+      names[student['first_name']]+=1
+    else:
+      names[student['first_name']] = 1
+
+for k,v in names.items():
+    print("{}: {}".format(k, v))
+
+
+

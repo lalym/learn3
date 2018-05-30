@@ -7,7 +7,15 @@ students = [
   {'first_name': 'Маша'},
   {'first_name': 'Оля'},
 ]
-# ???
+names={}
+for student in students:
+  if student['first_name'] in names:
+    names[student['first_name']]+=1
+  else:
+    names[student['first_name']]=1
+
+print('Самое частое имя среди учеников: '+ max(names, key=names.get))
+
 
 # Пример вывода:
 # Самое частое имя среди учеников: Маша
